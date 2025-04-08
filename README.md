@@ -35,73 +35,74 @@ The Weather Dataset is a time-series dataset with per-hour information about the
 
 1. **Find all the unique 'Wind Speed' values in the data**
 ```python
-weather['Wind Speed_km/h'].unique()
+data['Wind Speed_km/h'].unique()
 ```
 
 2. **Find the number of times when the 'Weather is exactly Clear'**
 ```python
-weather[weather['Weather'] == 'Clear'].shape[0]
+data[data.Weather == 'Clear']
 ```
 
 3. **Find the number of times when the 'Wind Speed was exactly 4 km/h'**
 ```python
-weather[weather['Wind Speed_km/h'] == 4].shape[0]
+data[data['Wind Speed_km/h'] == 4]
 ```
 
 4. **Find out all the Null Values in the data**
 ```python
-weather.isnull().sum()
+data.isnull().sum()
 ```
 
 5. **Rename the column name 'Weather' of the dataframe to 'Weather Condition'**
 ```python
-weather.rename(columns={'Weather': 'Weather Condition'}, inplace=True)
+data.rename(columns = {'Weather' : 'Weather Condition'}, inplace= True)
 ```
 
 6. **What is the mean 'Visibility'?**
 ```python
-weather['Visibility_km'].mean()
+data.Visibility_km.mean()
 ```
 
 7. **What is the Standard Deviation of 'Pressure'?**
 ```python
-weather['Press_kPa'].std()
+data.Press_kPa.std()
 ```
 
 8. **What is the Variance of 'Relative Humidity'?**
 ```python
-weather['Rel Hum_%'].var()
+data['Rel Hum_%'].var()
 ```
 
 9. **Find all instances when 'Snow' was recorded**
 ```python
-weather[weather['Weather Condition'].str.contains('Snow')]
+data[data['Weather Condition'].str.contains('Snow')]
+
 ```
 
 10. **Find all instances when 'Wind Speed is above 24' and 'Visibility is 25'**
 ```python
-weather[(weather['Wind Speed_km/h'] > 24) & (weather['Visibility_km'] == 25)]
+data[(data['Wind Speed_km/h'] > 24) & (data['Visibility_km'] == 25)]
 ```
 
 11. **What is the Mean value of each column against each 'Weather Condition'?**
 ```python
-weather.groupby('Weather Condition').mean()
+data.groupby('Weather Condition').mean(numeric_only= True)
 ```
 
 12. **What is the Minimum & Maximum value of each column against each 'Weather Condition'?**
 ```python
-weather.groupby('Weather Condition').min()
-weather.groupby('Weather Condition').max()
+data.groupby('Weather Condition').min()
+data.groupby('Weather Condition').max()
 ```
 
 13. **Show all the Records where Weather Condition is Fog**
 ```python
-weather[weather['Weather Condition'] == 'Fog']
+data[data['Weather Condition'] == 'Fog']
 ```
 
 14. **Find all instances when 'Weather is Clear' or 'Visibility is above 40'**
 ```python
-weather[(weather['Weather Condition'] == 'Clear') | (weather['Visibility_km'] > 40)]
+data[(data['Weather Condition'] == 'Clear') | (data['Visibility_km'] > 40)]
 ```
 
 15. **Find all instances when:**
@@ -109,6 +110,6 @@ weather[(weather['Weather Condition'] == 'Clear') | (weather['Visibility_km'] > 
   - OR  
   - B. 'Visibility is above 40'
 ```python
-weather[((weather['Weather Condition'] == 'Clear') & (weather['Rel Hum_%'] > 50)) | (weather['Visibility_km'] > 40)]
+data[(data['Weather Condition'] == 'Clear') & (data['Rel Hum_%'] > 50) | (data['Visibility_km'] > 40)]
 ```
 
