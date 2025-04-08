@@ -184,12 +184,9 @@ This project is a great starting point for beginners in Data Science and Analyti
 
 
 **By - Abhishek Patel**
+
 **Email ID: abhishek.skpatel@gmail.com**
+
 **LinkedIn: [LinkedIn](https://www.linkedin.com/in/abhishekpatel16/)**
 
-
-
-
 ```
-
-
