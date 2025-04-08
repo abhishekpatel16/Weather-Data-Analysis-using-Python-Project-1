@@ -37,8 +37,8 @@ The Weather Dataset is a time-series dataset with per-hour information about the
 ```python
 data['Wind Speed_km/h'].unique()
 ```
-![1](<img width="560" alt="image" src="https://github.com/user-attachments/assets/da52ae0a-ae1f-4cdb-97e6-372b751e2df8" />
-)
+![Q.1](https://github.com/abhishekpatel16/Weather-Data-Analysis-using-Python-Project-1/blob/main/images/Q.1.png)
+
 
 2. **Find the number of times when the 'Weather is exactly Clear'**
 ```python
