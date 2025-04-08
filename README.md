@@ -30,7 +30,7 @@ The Weather Dataset is a time-series dataset with per-hour information about the
 - Wind Speed (Wind Speed_km/h)
 - Visibility (Visibility_km)
 - Pressure (Press_kPa)
-- Weather Conditions
+- Weather
 
 ![data](https://github.com/abhishekpatel16/Weather-Data-Analysis-using-Python-Project-1/blob/main/images/data.png)
 
